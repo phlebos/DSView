@@ -935,12 +935,12 @@ bool StoreSession::json_decoders(QJsonArray &array)
             }
 
             if (have_probes) {
-                dec_obj["id"] = QJsonValue::fromVariant(d->id);
+                dec_obj["id"] = QJsonValue::fromVariant((QString)d->id);
                 dec_obj["channel"] = ch_array;
                 dec_obj["options"] = options_obj;
             } else {
                 QJsonObject stack_obj;
-                stack_obj["id"] = QJsonValue::fromVariant(d->id);
+                stack_obj["id"] = QJsonValue::fromVariant((QString)d->id);
                 stack_obj["options"] = options_obj;
                 stack_array.push_back(stack_obj);
             }

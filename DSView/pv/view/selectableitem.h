@@ -26,6 +26,7 @@
 #include <list>
 
 #include <QPen>
+#include <QObject>
 
 class QAction;
 class QMenu;

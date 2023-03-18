@@ -1158,7 +1158,7 @@ bool MainWindow::gen_session_json(QJsonObject &sessionVar){
    
     QJsonArray channelVar;
     sessionVar["Version"]= QJsonValue::fromVariant(BASE_SESSION_VERSION);
-    sessionVar["Device"] = QJsonValue::fromVariant(sdi->driver->name);
+    sessionVar["Device"] = QJsonValue::fromVariant(QString(sdi->driver->name));
     sessionVar["DeviceMode"] = QJsonValue::fromVariant(sdi->mode);
     sessionVar["Language"] = QJsonValue::fromVariant(app._frameOptions.language);
 
